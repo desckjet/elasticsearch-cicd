@@ -2,7 +2,7 @@
 
 # Copia el jar
 
-cp -f elasticsearch-cicd/build/*.jar jenkins/build/  
+cp -f elasticsearch-cicd/build/libs/*.jar jenkins/build/  
 
 echo "######################"
 echo "*** Building image ***"
