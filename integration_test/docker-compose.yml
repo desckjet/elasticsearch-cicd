@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: Dockerfile-gradle
     ports:
-      - 8888:8888
+      - 8888:8080
     networks:
       - net
 networks:
