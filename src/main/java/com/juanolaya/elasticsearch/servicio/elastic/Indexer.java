@@ -20,7 +20,7 @@ public class Indexer {
 
         RestHighLevelClient client = new RestHighLevelClient(
                 RestClient.builder(
-                        new HttpHost("localhost", 9200, "http")));
+                        new HttpHost("172.19.167.97", 9200, "http")));
         try{
             File docDir = new File(docsPath);
 
