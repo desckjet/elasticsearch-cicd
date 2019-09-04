@@ -10,7 +10,6 @@ services:
       - 9200:9200
     networks:
       - net
-
   application:
     image: application
     build:
@@ -18,5 +17,7 @@ services:
       dockerfile: Dockerfile-gradle
     ports:
       - 8888:8888
+    networks:
+      - net
 networks:
   net:
