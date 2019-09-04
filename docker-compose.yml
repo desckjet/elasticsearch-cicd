@@ -8,4 +8,19 @@ services:
       - discovery.type=single-node
     ports:
       - 9200:9200
-      - 9300:9300
+    networks:
+      - net
+  jenkins2:
+    container_name: jenkins2
+    image: jenkins2/docker
+    build:
+      context: ../
+    ports:
+      - "8181:8080"
+    volumes:
+      - ../../../jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - net
+networks:
+  net:
