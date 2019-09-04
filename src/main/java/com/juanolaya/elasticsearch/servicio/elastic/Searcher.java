@@ -30,7 +30,7 @@ public class Searcher {
 
         RestHighLevelClient client = new RestHighLevelClient(
                 RestClient.builder(
-                        new HttpHost("172.19.167.97", 9200, "http")));
+                        new HttpHost("application", 9200, "http")));
         try{
             MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("content", query);
 
