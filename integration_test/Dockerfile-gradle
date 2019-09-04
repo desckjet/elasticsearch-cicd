@@ -1,6 +1,7 @@
 FROM gradle
 
 RUN mkdir /app
+RUN echo "$PWD"
 
 COPY *.jar  /app/app.jar
 
