@@ -2,6 +2,7 @@
 
 # Copia el jar
 
+echo "$PWD"
 cp -f elasticsearch-cicd/build/libs/*.jar jenkins/build/  
 
 echo "######################"
