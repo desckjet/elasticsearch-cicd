@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-			../jenkins/build/gradle.sh gradle assemble
-			../jenkins/build/build.sh
+			./jenkins/build/gradle.sh gradle assemble
+			./jenkins/build/build.sh
            
                     '''   
             }
