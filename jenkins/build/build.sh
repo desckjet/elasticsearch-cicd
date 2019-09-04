@@ -5,7 +5,7 @@
 echo "*******************************************************"
 echo "$PWD"
 echo "/////////////////////////////////////////////////////////"
-cp -f ramp_up/build/libs/*.jar jenkins/build/  
+cp -f build/libs/*.jar jenkins/build/  
 
 echo "######################"
 echo "*** Building image ***"
