@@ -1,0 +1,7 @@
+FROM gradle
+
+RUN mkdir /app
+
+COPY *.jar  /app/app.jar
+
+CMD SERVER_PORT=8888 gradle build && java -jar /app/app.jar

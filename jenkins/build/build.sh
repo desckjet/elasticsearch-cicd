@@ -2,10 +2,8 @@
 
 # Copia el jar
 
-echo "*******************************************************"
-echo "$PWD"
-echo "/////////////////////////////////////////////////////////"
 cp -f build/libs/*.jar jenkins/build/  
+cp -f build/libs/*.jar integration_test/
 
 echo "######################"
 echo "*** Building image ***"

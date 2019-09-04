@@ -1,15 +1,6 @@
 version: '3.7'
 
 services:
-  elastic-server:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
-    container_name: elastic
-    environment:
-      - discovery.type=single-node
-    ports:
-      - 9200:9200
-    networks:
-      - net
   jenkins2:
     container_name: jenkins2
     image: jenkins2/docker
