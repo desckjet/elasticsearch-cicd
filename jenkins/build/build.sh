@@ -3,7 +3,7 @@
 # Copia el jar
 
 echo "$PWD"
-cp -f elasticsearch-cicd/build/libs/*.jar jenkins/build/  
+cp -f ramp_up/build/libs/*.jar jenkins/build/  
 
 echo "######################"
 echo "*** Building image ***"
