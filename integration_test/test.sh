@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd integration_test && docker-compose build --no-cache
+cd integration_test/ && docker-compose build
 
 docker-compose up -d
 
