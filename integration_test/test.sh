@@ -1,4 +1,7 @@
 #!/bin/bash
+
+cd integration_test && docker-compose build --no-cache
+
 docker-compose up -d
 
 echo "Connecting to elasticSearch..."
