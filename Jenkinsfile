@@ -31,11 +31,11 @@ pipeline {
 
         }*/
         stage('Push') {
-            withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
-                steps {
-		            sh './jenkins/push/push.sh'
+            steps {
+		            withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
+                        sh './jenkins/push/push.sh'
+                    }
                 }
-            }
             
         }
         /*stage('Deploy') {
