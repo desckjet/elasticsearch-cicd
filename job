@@ -21,7 +21,7 @@ pipelineJob('ramp_up_dsl') {
                         }
                     }
                 }
-            }
+            
         }
       '''.stripIndent())
       sandbox()     
