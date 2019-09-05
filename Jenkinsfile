@@ -30,14 +30,14 @@ pipeline {
 	    }
 
         }*/
-        stage('Push') {
+        /*stage('Push') {
             steps {
 		            withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
                         sh './jenkins/push/push.sh'
                     }
                 }
             
-        }
+        }*/
         /*stage('Deploy') {
             steps {
        		sh './jenkins/deploy/deploy.sh'
