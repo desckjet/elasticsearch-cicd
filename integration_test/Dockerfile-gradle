@@ -2,6 +2,9 @@ FROM gradle
 
 RUN mkdir /app
 
+RUN ls -al
+RUN pwd
+
 COPY *.jar  /app/app.jar
 COPY TestSample /app/TestSample
 
