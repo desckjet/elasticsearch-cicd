@@ -7,10 +7,8 @@ pipelineJob('ramp_up_dsl') {
                 stages {
                     stage('build) {
                         steps {
-                            sh '
-			                    ./jenkins/build/gradle.sh gradle assemble
-			                    ./jenkins/build/build.sh
-                            '  
+                            sh './jenkins/build/gradle.sh gradle assemble'
+			                sh './jenkins/build/build.sh'  
                         }
                     }
                     stage('Push') {
