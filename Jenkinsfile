@@ -30,11 +30,11 @@ pipeline {
 	    }
 
         }*/
-        /*stage('Push') {
+        stage('Push') {
             steps {
 		sh './jenkins/push/push.sh'
             }
-        }*/
+        }
         /*stage('Deploy') {
             steps {
        		sh './jenkins/deploy/deploy.sh'
