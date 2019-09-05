@@ -10,6 +10,6 @@ IMAGE="app"
 echo "*** Logging in ***"
 docker login -u desckjet -p $PASS
 echo "*** Tagging image ***"
-docker tag $IMAGE:$BUILD_TAG $REGISTRY/$IMAGE:$BUILD_TAG
+docker tag $IMAGE:$BUILD_TAG $REGISTRY:$BUILD_TAG
 echo "*** Pushing image ***"
-docker push $REGISTRY/$IMAGE:$BUILD_TAG
+docker push $REGISTRY:$BUILD_TAG
