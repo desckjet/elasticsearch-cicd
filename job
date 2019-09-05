@@ -1,5 +1,10 @@
 pipelineJob('ramp-up-dsl') {
   definition {
+    cpsScm {
+      scm {
+        git('https://github.com/desckjet/elasticsearch-cicd.git')
+      }
+    }
     cps {
       script('''
         pipeline {
