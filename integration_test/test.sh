@@ -23,8 +23,8 @@ then
               \ )     ( /
               /       \ "
 
-    #docker-compose down
+    docker-compose down
 
 fi
 
-#docker-compose down
+docker-compose down
