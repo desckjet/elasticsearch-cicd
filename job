@@ -10,6 +10,11 @@ pipelineJob('ramp-up-dsl') {
         pipeline {
             agent any
                 stages {
+                    stage('Checkout'){
+						steps {
+							checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/desckjet/elasticsearch-cicd.git']]])
+						}
+                    }
                     stage('Build') {
                         steps {
                             sh './jenkins/build/gradle.sh gradle assemble'
