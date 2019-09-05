@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-			./jenkins/build/gradle.sh gradle assemble
-			./jenkins/build/build.sh
+			        ./jenkins/build/gradle.sh gradle assemble
+			        ./jenkins/build/build.sh
            
                     '''   
             }
@@ -29,12 +29,12 @@ pipeline {
                 }
 	    }
 
-        }
+        }*/
         stage('Push') {
             steps {
-		sh './jenkins/push/push.sh'
+		        sh './jenkins/push/push.sh'
             }
-        }
+        }/*
         stage('Deploy') {
             steps {
        		sh './jenkins/deploy/deploy.sh'
