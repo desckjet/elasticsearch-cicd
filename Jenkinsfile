@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-			        ./jenkins/build/gradle.sh gradle assemble
-			        ./jenkins/build/build.sh
+			./jenkins/build/gradle.sh gradle assemble
+			./jenkins/build/build.sh
            
                     '''   
             }
@@ -27,15 +27,15 @@ pipeline {
                 always {
                     junit 'java-app/target/surefire-reports/*.xml'
                 }
-	    }
+	    }*/
 
-        }*/
+        }
         stage('Push') {
             steps {
-		        sh './jenkins/push/push.sh'
+		sh './jenkins/push/push.sh'
             }
-        }/*
-        stage('Deploy') {
+        }
+        /*stage('Deploy') {
             steps {
        		sh './jenkins/deploy/deploy.sh'
             }
