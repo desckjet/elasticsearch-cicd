@@ -24,14 +24,14 @@ pipelineJob('ramp-up-dsl') {
 			                      sh './jenkins/build/build.sh'          
                         }
                     } 
-                    /*stage('Push') {
+                    stage('Push') {
                         steps {
 		                    withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
                                 sh './jenkins/push/push.sh'
                             }
                         }
             
-                    }*/
+                    }
                 }
             
         }
