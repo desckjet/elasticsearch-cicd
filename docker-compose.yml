@@ -3,7 +3,7 @@ version: '3.7'
 services:
   jenkins2:
     container_name: jenkins2
-    image: jenkins2/docker
+    image: desckjet/jenkins2docker
     build:
       context: ../
     ports:
