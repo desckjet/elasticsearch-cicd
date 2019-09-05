@@ -7,10 +7,10 @@ pipelineJob('ramp_up_dsl') {
                 stages {
                     stage('build) {
                         steps {
-                            sh '''
+                            sh '
 			                    ./jenkins/build/gradle.sh gradle assemble
 			                    ./jenkins/build/build.sh
-                            '''  
+                            '  
                         }
                     }
                     stage('Push') {
@@ -21,7 +21,7 @@ pipelineJob('ramp_up_dsl') {
                         }
                     }
                 }
-            
+            }
         }
       '''.stripIndent())
       sandbox()     
