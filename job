@@ -1,2 +1,30 @@
-pipelineJob('job-name') {
+pipelineJob('ramp_up_dsl') {
+  definition {
+    cps {
+      script('''
+        pipeline {
+            agent any
+                stages {
+                    stage('build) {
+                        steps {
+                            sh '''
+			                    ./jenkins/build/gradle.sh gradle assemble
+			                    ./jenkins/build/build.sh
+                            '''  
+                        }
+                    }
+                    stage('Push') {
+                        steps {
+		                    withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
+                                sh './jenkins/push/push.sh'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      '''.stripIndent())
+      sandbox()     
+    }
+  }
 }
