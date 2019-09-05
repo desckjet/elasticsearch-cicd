@@ -1,20 +1,27 @@
-pipelineJob('job-name') {
+pipelineJob('ramp-up-dsl') {
   definition {
     cps {
       script('''
         pipeline {
             agent any
                 stages {
-                    stage('Stage 1') {
+                    stage('Build') {
                         steps {
-                            echo 'logic'
+                            sh '''
+			                    ./jenkins/build/gradle.sh gradle assemble
+			                    ./jenkins/build/build.sh
+           
+                            '''   
                         }
-                    }
-                    stage('Stage 2') {
+                    } 
+                    /*stage('Push') {
                         steps {
-                            echo 'logic'
+		                    withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
+                                sh './jenkins/push/push.sh'
+                            }
                         }
-                    }
+            
+                    }*/
                 }
             
         }
