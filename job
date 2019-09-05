@@ -1,4 +1,7 @@
 pipelineJob('ramp-up-dsl') {
+  parameters {
+  	stringParam('ROUTE') 
+  }
   definition {
     cpsScm {
       scm {
@@ -11,14 +14,14 @@ pipelineJob('ramp-up-dsl') {
             agent any
                 stages {
                     stage('Checkout'){
-						steps {
-							checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/desckjet/elasticsearch-cicd.git']]])
-						}
+						          steps {
+							          checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/desckjet/elasticsearch-cicd.git']]])
+						          }
                     }
                     stage('Build') {
                         steps {
                             sh './jenkins/build/gradle.sh gradle assemble'
-			                sh './jenkins/build/build.sh'          
+			                      sh './jenkins/build/build.sh'          
                         }
                     } 
                     /*stage('Push') {
