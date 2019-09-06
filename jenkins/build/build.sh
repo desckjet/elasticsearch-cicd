@@ -10,5 +10,5 @@ echo "*** Building image ***"
 echo "######################"
 
 cd jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
-cd ../../integration_test/ && docker-compose build
+cd ../../integration_test/ && docker-compose build --no-cache
 
