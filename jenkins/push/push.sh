@@ -6,6 +6,7 @@ echo "########################"
 
 REGISTRY="desckjet/ramp_up"
 IMAGE="app"
+USER="desckjet"
 
 echo "*** Logging in ***"
 docker login -u $USER -p $PASS
