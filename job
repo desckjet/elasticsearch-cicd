@@ -2,7 +2,6 @@ pipelineJob('ramp-up-dsl') {
   parameters {
     stringParam('ROUTE') 
   	stringParam('USER') 
-    stringParam('PASS') 
   }
   definition {
     cpsScm {
@@ -14,6 +13,9 @@ pipelineJob('ramp-up-dsl') {
       script('''
         pipeline {
             agent any
+                environment { 
+                  PASS = credentials('vasilico4314') 
+                }
                 stages {
                     stage('Checkout'){
 						          steps {
