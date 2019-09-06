@@ -1,4 +1,4 @@
-# First step, creating jenkins_home 
+## First step, creating jenkins_home 
 Inside the project execute:
 
 ```bash
@@ -31,9 +31,9 @@ Inside your new project click en configure
     configure your source code management
         select git and use the url project
 
-        ```bash
-        https://github.com/desckjet/elasticsearch-cicd.git
-        ``` 
+```bash
+https://github.com/desckjet/elasticsearch-cicd.git
+``` 
 
     In the layer build
         add build step and select process job dsls
