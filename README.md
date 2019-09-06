@@ -27,8 +27,8 @@ http://localhost:8181
 
 In jenkins you need to create a new job put whatever name and select freestyle project
 
-Inside your new project click en configure
-    configure your source code management
+Inside your new project click configure
+    and in the layer source code management
         select git and use the url project
 
 ```bash
@@ -38,18 +38,14 @@ https://github.com/desckjet/elasticsearch-cicd.git
     In the layer build
         add build step and select process job dsls
             click on look on filesystem 
-                write in the textbox name: DSL Scripts
-
+                write in the textbox name: DSL Scripts  -->
 ```bash
 job
 ``` 
 
     save and run your project
     
-    If you come back to  
-```bash
-http://localhost:8181
-``` 
+    If you come back to  http://localhost:8181
 
     you can see the new project created and configured.
 
