@@ -29,7 +29,8 @@ RUN /usr/local/bin/install-plugins.sh job-dsl \
   bitbucket \
   git \
   github \
-  startup-trigger-plugin
+  startup-trigger-plugin \
+  workflow-aggregator
 
 RUN usermod -aG docker jenkins
 
