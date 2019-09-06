@@ -40,16 +40,16 @@ Inside your new project click en configure
             click on look on filesystem 
                 write in the textbox name: DSL Scripts
 
-                ```bash
-                job
-                ``` 
+```bash
+job
+``` 
 
     save and run your project
     
     If you come back to  
-        ```bash
-            http://localhost:8181
-        ``` 
+```bash
+http://localhost:8181
+``` 
 
     you can see the new project created and configured.
 
@@ -60,9 +60,9 @@ Inside the project that was generated automatically click on run with parameters
 you need to specify the route in wich you clone the project
 the first script name prepared.sh created the folder jenkins_home inside the root project specify that in the box route like this
 
-    ```bash
-        /home/davidacevedo/repositories/elasticsearch-cicd/jenkins_home/workspace
-    ``` 
+```bash
+/home/davidacevedo/repositories/elasticsearch-cicd/jenkins_home/workspace
+``` 
 
 Now the pipeline is building..
 
@@ -71,5 +71,5 @@ Now the pipeline is building..
 in the root folder enter to the folder name integration_test and execute
 
 ```bash
-    bash test.sh
+bash test.sh
 ```
