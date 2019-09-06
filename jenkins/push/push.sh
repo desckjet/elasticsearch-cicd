@@ -8,7 +8,7 @@ REGISTRY="desckjet/ramp_up"
 IMAGE="app"
 
 echo "*** Logging in ***"
-docker login -u desckjet -p $PASS
+docker login -u $USER -p $PASS
 echo "*** Tagging image ***"
 docker tag $IMAGE:$BUILD_TAG $REGISTRY:$BUILD_TAG
 echo "*** Pushing image ***"

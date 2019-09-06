@@ -1,6 +1,8 @@
 pipelineJob('ramp-up-dsl') {
   parameters {
-  	stringParam('ROUTE') 
+    stringParam('ROUTE') 
+  	stringParam('USER') 
+    stringParam('PASS') 
   }
   definition {
     cpsScm {
