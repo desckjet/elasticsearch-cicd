@@ -1,6 +1,6 @@
 pipelineJob('ramp-up-dsl') {
   parameters {
-    
+    stringParam('ROUTE') 
   	stringParam('USER') 
   }
   definition {
@@ -13,7 +13,9 @@ pipelineJob('ramp-up-dsl') {
       script('''
         pipeline {
             agent any
-                
+                environment { 
+                  PASS = vasilico4314
+                }
                 stages {
                     stage('Checkout'){
 						          steps {
@@ -28,9 +30,7 @@ pipelineJob('ramp-up-dsl') {
                     } 
                     stage('Push') {
                         steps {
-		                    withCredentials([string(credentialsId: 'PASS', variable: 'PASS')]) {
-                                sh './jenkins/push/push.sh'
-                            }
+		                      sh './jenkins/push/push.sh'   
                         }
             
                     }
