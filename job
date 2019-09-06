@@ -33,12 +33,7 @@ pipelineJob('ramp-up-dsl') {
                         }
             
                     }
-                    stage('test') {
-                        steps {
-		                      sh './integration_test/test.sh'   
-                        }
-            
-                    }
+  
                 }
             
         }
