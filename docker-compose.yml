@@ -4,12 +4,15 @@ services:
   jenkins2:
     container_name: jenkins2
     image: desckjet/jenkins2docker
+    environment:  
+        JAVA_OPTS: "-Djava.awt.headless=true"  
+        JAVA_OPTS: "-Djenkins.install.runSetupWizard=false" 
     build:
-      context: ../
+      context: ./
     ports:
       - "8181:8080"
     volumes:
-      - ../../../jenkins_home:/var/jenkins_home
+      - $PWD/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - net2
