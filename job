@@ -13,7 +13,7 @@ pipelineJob('ramp-up-dsl') {
         pipeline {
             agent any
                 environment { 
-                  PASS='vasilico4314'
+                  P
                 }
                 stages {
                     stage('Checkout'){
